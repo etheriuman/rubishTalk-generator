@@ -35,11 +35,11 @@ function generateRubbishTalk(job) {
       break
     case 'designer':
       rubbishPackage.designer = 1 // true
-      rubbishPackage.rubbishTalk = `身為一位設計師，${randomItem(task.engineer)}，${phrase}吧！`
+      rubbishPackage.rubbishTalk = `身為一位設計師，${randomItem(task.designer)}，${randomItem(phrase)}吧！`
       break
     case 'entrepreneur':
       rubbishPackage.entrepreneur = 1 // true
-      rubbishPackage.rubbishTalk = `身為一位創業家，${randomItem(task.entrepreneur)}，${phrase}吧！`
+      rubbishPackage.rubbishTalk = `身為一位創業家，${randomItem(task.entrepreneur)}，${randomItem(phrase)}吧！`
       break
   }
 
