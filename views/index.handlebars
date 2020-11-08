@@ -1,0 +1,43 @@
+<div class="container">
+  <div class="text-center mt-3 mb-5">
+    <h2>你想對誰說幹話？</h2>
+  </div>
+  <form method="POST" action="/">
+    <div class="row justify-content-between">
+      {{!-- engineer --}}
+      <div class="card col-sm-3 p-0 text-center">
+        <label for="options-engineer">
+          <img src="https://assets-lighthouse.s3.amazonaws.com/uploads/image/file/5668/angry-developer.jpg" class="card-img-top" alt="engineer-image">
+        </label>
+        <label class="card-body">
+          <input class="form-check-input" type="radio" name="options" id="options-engineer" value="engineer" {{#if rubbishPackage.engineer}}checked{{/if}}>
+          <span>工程師</span>
+        </label>
+      </div>
+      {{!-- designer --}}
+      <div class="card col-sm-3 p-0 text-center">
+        <label for="options-designer">
+          <img src="https://assets-lighthouse.s3.amazonaws.com/uploads/image/file/5667/angry-designer.jpg" class="card-img-top" alt="designer-image">
+        </label>
+        <label class="card-body">
+          <input class="form-check-input" type="radio" name="options" id="options-designer" value="designer" {{#if rubbishPackage.designer}}checked{{/if}}>
+          <span>設計師</span>
+        </label>
+      </div>
+      {{!-- founder --}}
+      <div class="card col-sm-3 p-0 text-center">
+        <label for="options-entrepreneur">
+          <img src="https://assets-lighthouse.s3.amazonaws.com/uploads/image/file/5669/angry-founder.jpg" class="card-img-top" alt="entrepreneur-image">
+        </label>
+        <label class="card-body">
+          <input class="form-check-input" type="radio" name="options" id="options-entrepreneur" value="entrepreneur" {{#if rubbishPackage.entrepreneur}}checked{{/if}}>
+          <span>創業家</span>
+        </label>
+      </div>
+    </div>
+    <div class="row justify-content-between mt-5">
+        <button class="btn btn-success" style="height: 50px;" type="submit"><span style="font-size: large;">產生幹話</span></button>
+        <textarea rows="4" style="width: 75%;">{{rubbishPackage.rubbishTalk}}</textarea>
+    </div>
+  </form>
+</div>
