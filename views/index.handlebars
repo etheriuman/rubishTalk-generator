@@ -10,7 +10,7 @@
           <img src="https://assets-lighthouse.s3.amazonaws.com/uploads/image/file/5668/angry-developer.jpg" class="card-img-top" alt="engineer-image">
         </label>
         <label class="card-body">
-          <input class="form-check-input" type="radio" name="options" id="options-engineer" value="engineer" {{#if rubbishPackage.engineer}}checked{{/if}}>
+          <input class="form-check-input" type="radio" name="options" id="options-engineer" value="engineer" {{#ifEqual job 'engineer'}}checked{{/ifEqual}}>
           <span>工程師</span>
         </label>
       </div>
@@ -20,7 +20,7 @@
           <img src="https://assets-lighthouse.s3.amazonaws.com/uploads/image/file/5667/angry-designer.jpg" class="card-img-top" alt="designer-image">
         </label>
         <label class="card-body">
-          <input class="form-check-input" type="radio" name="options" id="options-designer" value="designer" {{#if rubbishPackage.designer}}checked{{/if}}>
+          <input class="form-check-input" type="radio" name="options" id="options-designer" value="designer" {{#ifEqual job 'designer'}}checked{{/ifEqual}}>
           <span>設計師</span>
         </label>
       </div>
@@ -30,14 +30,14 @@
           <img src="https://assets-lighthouse.s3.amazonaws.com/uploads/image/file/5669/angry-founder.jpg" class="card-img-top" alt="entrepreneur-image">
         </label>
         <label class="card-body">
-          <input class="form-check-input" type="radio" name="options" id="options-entrepreneur" value="entrepreneur" {{#if rubbishPackage.entrepreneur}}checked{{/if}}>
+          <input class="form-check-input" type="radio" name="options" id="options-entrepreneur" value="entrepreneur" {{#ifEqual job 'entrepreneur'}}checked{{/ifEqual}}>
           <span>創業家</span>
         </label>
       </div>
     </div>
     <div class="row justify-content-between mt-5">
         <button class="btn btn-success" style="height: 50px;" type="submit"><span style="font-size: large;">產生幹話</span></button>
-        <textarea rows="4" style="width: 75%;">{{rubbishPackage.rubbishTalk}}</textarea>
+        <textarea rows="4" style="width: 75%;">{{rubbishTalk}}</textarea>
     </div>
   </form>
 </div>
