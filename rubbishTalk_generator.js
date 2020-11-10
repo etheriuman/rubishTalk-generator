@@ -21,13 +21,14 @@ function generateRubbishTalk(job) {
   }
   const phrase = ['很簡單', '很容易', '很快', '很正常']
 
-  // generate rubbish talk
-  const rubbishTalk = `身為一個${translatedJob[job]}，${randomItem(task[job])}，${randomItem(phrase)}吧！`
-  
   // exception
   if (!job) {
     return '請選擇一種職業產生幹話！'
   }
+  
+  // generate rubbish talk
+  const rubbishTalk = `身為一個${translatedJob[job]}，${randomItem(task[job])}，${randomItem(phrase)}吧！`
+  
   // output
   return rubbishTalk
 }
